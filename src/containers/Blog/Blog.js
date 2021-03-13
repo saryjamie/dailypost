@@ -10,20 +10,27 @@ class Blog extends Component {
   state = {
     posts: [],
     selectedPostId: null,
+    error: false,
   };
 
   componentDidMount() {
-    axios.get("http://jsonplaceholder.typicode.com/posts").then((response) => {
-      const posts = response.data.slice(0, 4);
-      const updatedPosts = posts.map((post) => {
-        return {
-          ...post,
-          author: "Sary",
-        };
+    axios
+      .get("http://jsonplaceholder.typicode.com/poststttttt")
+      .then((response) => {
+        const posts = response.data.slice(0, 4);
+        const updatedPosts = posts.map((post) => {
+          return {
+            ...post,
+            author: "Sary",
+          };
+        });
+        this.setState({ posts: updatedPosts });
+        //   console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+        this.setState({ error: true });
       });
-      this.setState({ posts: updatedPosts });
-      //   console.log(response);
-    });
   }
 
   postSelectedHandler = (id) => {
