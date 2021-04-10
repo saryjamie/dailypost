@@ -5,6 +5,26 @@ class Posts extends Component {
     posts: [],
   };
 
+  componentDidMount() {
+    axios
+      .get("/posts")
+      .then((response) => {
+        const posts = response.data.slice(0, 4);
+        const updatedPosts = posts.map((post) => {
+          return {
+            ...post,
+            author: "Dana",
+          };
+        });
+        this.setState({ posts: updatedPosts });
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+        this.setState({ error: true });
+      });
+  }
+
   postSelectedHandler = (id) => {
     this.setState({ selectedPostId: id });
   };
