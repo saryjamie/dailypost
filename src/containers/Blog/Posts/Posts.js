@@ -4,6 +4,10 @@ class Posts extends Component {
   state = {
     posts: [],
   };
+
+  postSelectedHandler = (id) => {
+    this.setState({ selectedPostId: id });
+  };
   render() {
     let posts = (
       <p style={{ textAlign: "center", color: "red" }}>Something went wrong!</p>
