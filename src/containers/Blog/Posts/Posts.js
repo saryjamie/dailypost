@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 
 class Posts extends Component {
+  state = {
+    posts: [],
+    selectedPostId: null,
+    error: false,
+  };
   render() {
     let posts = (
       <p style={{ textAlign: "center", color: "red" }}>Something went wrong!</p>

@@ -4,12 +4,6 @@ import axios from "../../axios";
 import "./Blog.css";
 
 class Blog extends Component {
-  state = {
-    posts: [],
-    selectedPostId: null,
-    error: false,
-  };
-
   componentDidMount() {
     axios
       .get("/posts")
