@@ -21,7 +21,7 @@ class Posts extends Component {
       })
       .catch((err) => {
         console.log(err);
-        this.setState({ error: true });
+        //this.setState({ error: true });
       });
   }
 
