@@ -14,7 +14,7 @@ class Blog extends Component {
           <nav>
             <ul>
               <li>
-                <NavLink to="/" exact>
+                <NavLink to="/" exact activeClassName="my-active">
                   Home
                 </NavLink>
               </li>
