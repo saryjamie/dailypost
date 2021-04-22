@@ -41,7 +41,7 @@ class Posts extends Component {
     if (!this.state.error) {
       posts = this.state.posts.map((post) => {
         return (
-          <Link>
+          <Link to={"/" + post.id}>
             <Post
               key={post.id}
               title={post.title}
