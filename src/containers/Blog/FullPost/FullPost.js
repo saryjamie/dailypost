@@ -8,6 +8,7 @@ class FullPost extends Component {
   };
 
   componentDidUpdate() {
+    console.log(this.props);
     if (this.props.id) {
       if (
         !this.state.loadedPost ||
