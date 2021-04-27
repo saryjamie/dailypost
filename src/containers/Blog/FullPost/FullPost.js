@@ -15,7 +15,7 @@ class FullPost extends Component {
         (this.state.loadedPost && this.state.loadedPost.id !== this.props.id)
       ) {
         axios.get("/posts/" + this.props.match.params.id).then((response) => {
-          console.log(response);
+          // console.log(response);
           this.setState({ loadedPost: response.data });
         });
       }
