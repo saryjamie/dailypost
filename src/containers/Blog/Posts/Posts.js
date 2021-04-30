@@ -54,7 +54,11 @@ class Posts extends Component {
       });
     }
 
-    return <section className="Posts">{posts}</section>;
+    return;
+    <div>
+      <section className="Posts">{posts}</section>
+      <Route path="/:id" exact component={FullPost} />
+    </div>;
   }
 }
 
