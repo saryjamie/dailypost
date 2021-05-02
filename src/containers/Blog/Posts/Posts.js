@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "../../../axios";
 import { Route } from "react-router-dom";
 // import { Link } from "react-router-dom";
-
+import FullPost from "../FullPost/FullPost";
 import Post from "../../../components/Post/Post";
 import "./Posts.css";
 
